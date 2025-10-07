@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>فاحص الأمراض | Disease Checker - HAMAMO</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="logo"><span class="logo-mark">HAMAMO</span></div>
+    <h1 class="title">فاحص الأمراض <span class="en">| Disease Checker</span></h1>
+  </header>
+
+  <main class="card">
+    <div class="disclaimer">
+      <strong>تنبيه مهم:</strong> هذه الأداة للمعلومات والتوعية فقط ولا تُعد بديلاً عن استشارة الطبيب. لا تتخذ قرارات دوائية نهائية دون استشارة مختص. إذا كانت الأَعراض شديدة فاتصل بالطوارئ فورًا.
+    </div>
+
+    <form id="survey">
+      <div class="row">
+        <label>العمر (سنة): <input type="number" id="age" min="0" max="120" required /></label>
+        <label>الوزن (kg) - اختياري: <input type="number" id="weight" min="0" step="0.1" /></label>
+      </div>
+
+      <h2>اختر الأعراض التي تشعر بها (يمكن اختيار عدة أعراض)</h2>
+
+      <div id="filters" class="filters">
+        <!-- checkboxes inserted by JS -->
+      </div>
+
+      <div class="actions">
+        <button type="submit" id="checkBtn">عرض النتيجة</button>
+        <button type="button" id="resetBtn" class="secondary">إعادة الفحص</button>
+      </div>
+    </form>
+
+    <section id="result" class="result" style="display:none"></section>
+
+    <footer class="footer">
+      <p class="sources">المصادر: NHS وMayo Clinic — المعلومات للتوعية فقط.</p>
+      <p class="credit">تم التطوير بواسطة <strong>HAMAMO</strong> © 2025</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+:root{
+  --bg:#f7fbff;
+  --card:#ffffff;
+  --primary:#0b74da;
+  --accent:#2db48f;
+  --muted:#6b7280;
+  --danger:#d9534f;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, "Segoe UI", Tahoma, Arial; background:var(--bg); margin:0; padding:24px; display:flex; justify-content:center; color:#0b1b2b;}
+.top{max-width:980px; width:100%; display:flex; align-items:center; gap:16px; margin-bottom:12px}
+.logo{background:linear-gradient(135deg,var(--primary),#66b3ff); padding:10px 16px; border-radius:10px; box-shadow:0 4px 14px rgba(11,116,218,0.15)}
+.logo-mark{font-weight:800; color:white; letter-spacing:1px; font-size:20px}
+.title{margin:0; font-size:20px}
+.title .en{font-weight:400; color:var(--muted); font-size:14px; margin-right:8px}
+
+.card{width:100%; max-width:980px; background:var(--card); border-radius:14px; padding:20px; box-shadow:0 10px 30px rgba(15,23,42,0.06)}
+
+.disclaimer{background:#fff8e6; padding:12px; border-radius:8px; margin-bottom:12px; color:#5a3f11; border:1px solid #ffecb5}
+
+.row{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:10px}
+.row label{flex:1 1 200px}
+
+input[type=number]{padding:8px; border-radius:8px; border:1px solid #e6eef8; width:100%}
+
+h2{margin-top:8px; color:var(--primary)}
+
+.filters{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:8px}
+.filter{display:flex; align-items:center; gap:10px; padding:10px; border-radius:10px; background:#fbfdff; border:1px solid #eef6ff; cursor:pointer}
+.filter input[type="checkbox"]{appearance:none; width:22px; height:22px; border-radius:6px; border:2px solid #cbd5e1; display:inline-block; background:#f5f7fb}
+.filter input[type="checkbox"]:checked{background:linear-gradient(135deg,var(--accent),#7be3b1); border-color:var(--accent)}
+.filter .label-text{font-weight:600}
+.filter .sub{font-size:12px; color:var(--muted)}
+
+.actions{margin-top:16px; display:flex; gap:8px; align-items:center}
+button#checkBtn{background:var(--primary); color:white; border:none; padding:10px 14px; border-radius:10px; cursor:pointer}
+button.secondary{background:white; border:1px solid #d1e7f9; padding:10px 12px; border-radius:10px; cursor:pointer}
+
+.result{margin-top:16px; padding:14px; border-radius:10px; background:linear-gradient(180deg,#eef9ff,#f7fff9); border:1px solid #e1f3ff}
+.result h3{margin-top:0; color:var(--primary)}
+
+.med-list{margin:6px 0 0 18px; color:#07314a}
+.note{color:var(--muted); font-size:14px}
+
+.footer{margin-top:18px; display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap}
+.sources{color:var(--muted); font-size:13px; margin:0}
+.credit{color:var(--muted); font-size:13px; margin:0}
+
+@media (max-width:600px){
+  .filters{grid-template-columns:1fr}
+  .top{flex-direction:column; align-items:flex-start}
+}
